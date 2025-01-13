@@ -11,18 +11,30 @@
   <body>
     <div class="container">
         <div class="row">
-            <div class="col"> 
-                <h1>cadastro</h1>
-                <form> 
-                    <div class="mb-3">
-                        <label for="exampleInputEmail1" class="form-label">Email address</label>
-                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                      </div>
-                </form>
-            </div>
+            <?php
+            include "conexao.php";
+
+
+              $nome = $_POST['nome']??'';
+              $email = $_POST['email']??'';
+              $data_nascimento = $_POST['data_nascimento']??'';
+            
+            
+            $sql = "INSERT INTO `pessoas`(`nome`, `email`, `data_nascimento`) VALUES ('$nome','$email','$data_nascimento')";
+
+            if (mysqli_query($conn, $sql)){
+              mensagem("$nome Cadastrado com sucesso!", 'success'); 
+            } else{
+              mensagem("$nome NÃO cadastrado.", 'danger');
+            } 
+
+            ?>
+
+  
+
         </div>
     </div>
-
+    
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
