@@ -1,5 +1,8 @@
+<?php include "../validar.php";
+
+?>
 <!doctype html>
-<html lang="en">
+<html lang="pt-br">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -20,6 +23,7 @@
                 <p>Acesse as funções</p>
             <a class="btn btn-primary btn-lg" href="cadastro.html" role="button">Cadastro de Pessoa</a>
             <a class="btn btn-primary btn-lg" href="pesquisar.php" role="button">pesquisar</a>
+            <a class="btn btn-danger btn-lg" href="../logout.php" role="button">sair</a>
 
        </div>
 
