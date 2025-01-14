@@ -20,9 +20,8 @@ Este projeto é um sistema de cadastro de usuários, desenvolvido utilizando PHP
 
 ### Estrutura do Banco de Dados
 
-O banco de dados contém as seguintes tabelas:
+O banco de dados contém a seguinte tabela:
 
-- **pessoas**: Armazena os dados das pessoas cadastradas.
 - **usuarios**: Armazena os dados dos usuários do sistema.
 
 ### Dependências
